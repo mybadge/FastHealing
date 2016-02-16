@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FHAddCaseTC">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bouncesZoom="NO" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+            <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="dataSource" destination="-1" id="Tng-2m-Rnh"/>
+                <outlet property="delegate" destination="-1" id="9aC-8N-iBw"/>
+            </connections>
+            <point key="canvasLocation" x="258" y="215"/>
+        </tableView>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="77" id="e3a-yl-FoM">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e3a-yl-FoM" id="PHQ-Nh-PPK">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="76.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="病例类型:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vC0-Fk-vyC">
+                        <rect key="frame" x="10" y="29" width="64.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JOr-Z8-RTe">
+                        <rect key="frame" x="284" y="28" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="97m-a0-laM"/>
+                            <constraint firstAttribute="width" constant="20" id="z3S-40-XT3"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="肿瘤" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ai3-TP-goM">
+                        <rect key="frame" x="244" y="29" width="30" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="vC0-Fk-vyC" firstAttribute="centerY" secondItem="PHQ-Nh-PPK" secondAttribute="centerY" id="84q-Vx-5Ru"/>
+                    <constraint firstItem="ai3-TP-goM" firstAttribute="centerY" secondItem="PHQ-Nh-PPK" secondAttribute="centerY" id="Lxb-Pm-ZOl"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="JOr-Z8-RTe" secondAttribute="trailing" constant="8" id="Tod-Qq-GOu"/>
+                    <constraint firstItem="JOr-Z8-RTe" firstAttribute="centerY" secondItem="PHQ-Nh-PPK" secondAttribute="centerY" id="ZkO-aU-jgd"/>
+                    <constraint firstItem="vC0-Fk-vyC" firstAttribute="leading" secondItem="PHQ-Nh-PPK" secondAttribute="leadingMargin" constant="2" id="i99-mh-kJF"/>
+                    <constraint firstItem="JOr-Z8-RTe" firstAttribute="leading" secondItem="ai3-TP-goM" secondAttribute="trailing" constant="10" id="zYn-7z-H3o"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="118" y="745.5"/>
+        </tableViewCell>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="146" id="hNQ-Vn-VcC">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="146"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hNQ-Vn-VcC" id="vTg-d8-Yjt">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="145.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ylb-Ey-bPc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="病症描述:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoO-bP-iHu">
+                                <rect key="frame" x="10" y="11" width="64.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Ii-9G-ELn">
+                                <rect key="frame" x="292" y="10" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Dk6-2K-7q7"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="QpO-qs-2kA"/>
+                                    <constraint firstAttribute="width" constant="20" id="cW4-im-SUW"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="qPZ-E6-Ii8"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="添加疾病描述标签" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aI1-4j-cZY">
+                                <rect key="frame" x="166" y="11" width="120" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7Ii-9G-ELn" firstAttribute="leading" secondItem="aI1-4j-cZY" secondAttribute="trailing" constant="6" id="1K6-kV-rag"/>
+                            <constraint firstItem="aI1-4j-cZY" firstAttribute="centerY" secondItem="ylb-Ey-bPc" secondAttribute="centerY" id="7E4-pN-lnh"/>
+                            <constraint firstItem="xoO-bP-iHu" firstAttribute="centerY" secondItem="ylb-Ey-bPc" secondAttribute="centerY" id="K16-EO-x9U"/>
+                            <constraint firstItem="7Ii-9G-ELn" firstAttribute="centerY" secondItem="ylb-Ey-bPc" secondAttribute="centerY" id="OWi-D4-Qsd"/>
+                            <constraint firstAttribute="trailing" secondItem="7Ii-9G-ELn" secondAttribute="trailing" constant="8" id="Ux4-mF-NpK"/>
+                            <constraint firstItem="xoO-bP-iHu" firstAttribute="leading" secondItem="ylb-Ey-bPc" secondAttribute="leading" constant="10" id="hz8-rz-BrV"/>
+                            <constraint firstAttribute="height" constant="40" id="yIy-de-cU1"/>
+                        </constraints>
+                    </view>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qOq-he-aCw">
+                        <rect key="frame" x="0.0" y="41" width="320" height="51"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RxV-EG-lDu">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2TN-BN-G04">
+                        <rect key="frame" x="8" y="107" width="304" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.70980392160000005" green="0.70980392160000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="qOq-he-aCw" secondAttribute="trailing" id="4ia-3S-7Py"/>
+                    <constraint firstItem="2TN-BN-G04" firstAttribute="leading" secondItem="vTg-d8-Yjt" secondAttribute="leadingMargin" id="5Lb-3i-hGw"/>
+                    <constraint firstItem="2TN-BN-G04" firstAttribute="top" secondItem="qOq-he-aCw" secondAttribute="bottom" constant="15" id="5XH-He-Wry"/>
+                    <constraint firstItem="ylb-Ey-bPc" firstAttribute="top" secondItem="vTg-d8-Yjt" secondAttribute="top" id="7za-rr-MYD"/>
+                    <constraint firstItem="qOq-he-aCw" firstAttribute="leading" secondItem="vTg-d8-Yjt" secondAttribute="leading" id="JH3-eo-4ka"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="2TN-BN-G04" secondAttribute="trailing" id="O7l-jg-0wz"/>
+                    <constraint firstAttribute="trailing" secondItem="ylb-Ey-bPc" secondAttribute="trailing" id="YF4-XD-Ds9"/>
+                    <constraint firstItem="qOq-he-aCw" firstAttribute="top" secondItem="ylb-Ey-bPc" secondAttribute="bottom" constant="1" id="aAI-pa-IJE"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="2TN-BN-G04" secondAttribute="bottom" constant="10" id="chD-QX-HgM"/>
+                    <constraint firstItem="ylb-Ey-bPc" firstAttribute="leading" secondItem="vTg-d8-Yjt" secondAttribute="leading" id="d39-hF-GEN"/>
+                    <constraint firstItem="2TN-BN-G04" firstAttribute="top" secondItem="qOq-he-aCw" secondAttribute="bottom" constant="15" id="nc9-d2-1Jc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="139" y="990"/>
+        </tableViewCell>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="134" id="Sny-SL-FIB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="134"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Sny-SL-FIB" id="hj5-TP-d2M">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="133.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cag-ht-JBN">
+                        <rect key="frame" x="8" y="8" width="37.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doctor_default" translatesAutoresizingMaskIntoConstraints="NO" id="ICs-cN-p8R">
+                        <rect key="frame" x="8" y="26.5" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="80" id="IBE-ER-Mps"/>
+                            <constraint firstAttribute="width" constant="80" id="wYm-VM-tn3"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ICs-cN-p8R" firstAttribute="leading" secondItem="hj5-TP-d2M" secondAttribute="leading" constant="8" id="1Oz-ok-wTE"/>
+                    <constraint firstItem="ICs-cN-p8R" firstAttribute="top" secondItem="cag-ht-JBN" secondAttribute="bottom" constant="0.5" id="ASk-gA-IZr"/>
+                    <constraint firstItem="cag-ht-JBN" firstAttribute="leading" secondItem="hj5-TP-d2M" secondAttribute="leading" constant="8" id="CzM-Gt-CHM"/>
+                    <constraint firstItem="cag-ht-JBN" firstAttribute="top" secondItem="hj5-TP-d2M" secondAttribute="top" constant="8" id="fyg-YE-1F2"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="118" y="1224"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="doctor_default" width="38" height="38"/>
+    </resources>
+</document>

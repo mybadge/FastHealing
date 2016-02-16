@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="FHChooseDiseaseHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xzn-Gp-h18">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                    <state key="normal" title="Button">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Xzn-Gp-h18" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="6IO-Hs-ELg"/>
+                <constraint firstAttribute="trailing" secondItem="Xzn-Gp-h18" secondAttribute="trailing" id="FnC-he-YUz"/>
+                <constraint firstItem="Xzn-Gp-h18" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="UPm-3L-dYd"/>
+                <constraint firstAttribute="bottom" secondItem="Xzn-Gp-h18" secondAttribute="bottom" id="wD8-uj-HUK"/>
+            </constraints>
+            <connections>
+                <outlet property="headerBtn" destination="Xzn-Gp-h18" id="f9B-0t-ne2"/>
+                <outlet property="title" destination="Xzn-Gp-h18" id="qiw-P4-blp"/>
+            </connections>
+        </collectionReusableView>
+    </objects>
+</document>

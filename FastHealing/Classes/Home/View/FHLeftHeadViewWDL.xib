@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="xfC-LG-w9p" customClass="FHLeftHeadViewWDL">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="145"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iGo-aD-wzj">
+                    <rect key="frame" x="216" y="0.0" width="168" height="145"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dg-I8-0KB">
+                            <rect key="frame" x="98" y="107" width="70" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="70" id="geN-x5-SeB"/>
+                                <constraint firstAttribute="height" constant="30" id="tdi-Ff-vbQ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="注册" backgroundImage="login_Input-box">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="registerClick" destination="xfC-LG-w9p" eventType="touchUpInside" id="LFU-Ph-Rkm"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gd8-6b-SCh">
+                            <rect key="frame" x="0.0" y="107" width="70" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="hXf-FA-pfY"/>
+                                <constraint firstAttribute="width" constant="70" id="ocS-7V-LIC"/>
+                            </constraints>
+                            <state key="normal" title="登录" backgroundImage="login_Input-box">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="loginClick" destination="xfC-LG-w9p" eventType="touchUpInside" id="bcO-q4-0kh"/>
+                            </connections>
+                        </button>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="doctor_default" translatesAutoresizingMaskIntoConstraints="NO" id="UyR-O6-jj3">
+                            <rect key="frame" x="54" y="25" width="60" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="1xb-1R-boR"/>
+                                <constraint firstAttribute="height" constant="60" id="iWL-JO-5HI"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="gd8-6b-SCh" secondAttribute="bottom" constant="8" id="5od-Bb-RWD"/>
+                        <constraint firstAttribute="height" constant="128" id="GH8-79-jVB"/>
+                        <constraint firstAttribute="bottom" secondItem="3dg-I8-0KB" secondAttribute="bottom" constant="8" id="I1Y-SY-rHx"/>
+                        <constraint firstAttribute="trailing" secondItem="3dg-I8-0KB" secondAttribute="trailing" id="SV1-Qz-Dj3"/>
+                        <constraint firstItem="gd8-6b-SCh" firstAttribute="leading" secondItem="iGo-aD-wzj" secondAttribute="leading" id="egA-mM-rXz"/>
+                        <constraint firstItem="UyR-O6-jj3" firstAttribute="centerX" secondItem="iGo-aD-wzj" secondAttribute="centerX" id="ijA-as-Wxu"/>
+                        <constraint firstItem="UyR-O6-jj3" firstAttribute="top" secondItem="iGo-aD-wzj" secondAttribute="top" constant="25" id="mtr-zz-Z2X"/>
+                        <constraint firstAttribute="width" constant="168" id="n3K-3L-tAd"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="GH8-79-jVB"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="iGo-aD-wzj" firstAttribute="height" secondItem="xfC-LG-w9p" secondAttribute="height" id="K6k-zI-KyV"/>
+                <constraint firstItem="iGo-aD-wzj" firstAttribute="top" secondItem="xfC-LG-w9p" secondAttribute="top" id="tSK-DO-lSa"/>
+                <constraint firstItem="iGo-aD-wzj" firstAttribute="centerX" secondItem="xfC-LG-w9p" secondAttribute="centerX" id="xV2-xp-AVC"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="centerViewConstraint" destination="xV2-xp-AVC" id="Ezh-ne-DMV"/>
+                <outlet property="iconView" destination="UyR-O6-jj3" id="hUr-nr-1O5"/>
+            </connections>
+            <point key="canvasLocation" x="257" y="57.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="doctor_default" width="38" height="38"/>
+        <image name="login_Input-box" width="75" height="75"/>
+    </resources>
+</document>

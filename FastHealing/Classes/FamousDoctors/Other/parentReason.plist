@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>高领妊娠</string>
+	<string>习惯性流产</string>
+	<string>巨大儿</string>
+	<string>多胎未成熟儿</string>
+	<string>胎儿前期脑损伤</string>
+	<string>胎儿期中毒</string>
+	<string>染色体异常等遗传病</string>
+	<string>妊娠三个月病毒感染</string>
+	<string>母亲吸烟</string>
+	<string>母亲嗜酒</string>
+	<string>母亲结核</string>
+	<string>母亲肝炎</string>
+	<string>母亲贫血</string>
+	<string>妊娠高血压综合症</string>
+	<string>长期服药</string>
+</array>
+</plist>

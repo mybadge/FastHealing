@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>产程长</string>
+	<string>早破冰</string>
+	<string>前置胎盘</string>
+	<string>胎盘早剥</string>
+	<string>胎盘机能不良</string>
+	<string>羊水异常脐带异常</string>
+	<string>脐带绕颈</string>
+	<string>宫内乏氧</string>
+	<string>妊娠中毒症</string>
+	<string>糖尿病</string>
+	<string>双胎</string>
+	<string>多胎</string>
+	<string>剖腹产</string>
+	<string>臀产</string>
+	<string>高位中位产钳</string>
+	<string>通过产道难发生脑组织出血</string>
+	<string>抬头引起助产术</string>
+	<string>重症窒息引发的新生儿疾病</string>
+	<string>分娩造成的颅脑损伤</string>
+</array>
+</plist>

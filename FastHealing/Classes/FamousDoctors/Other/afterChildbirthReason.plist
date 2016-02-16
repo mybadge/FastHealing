@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>低体重儿</string>
+	<string>早产儿</string>
+	<string>未成熟儿</string>
+	<string>过期产儿</string>
+	<string>窒息1分钟后新生儿惊厥</string>
+	<string>重度黄疸</string>
+	<string>呼吸暂停</string>
+	<string>青紫发作</string>
+	<string>畸形</string>
+	<string>颅内出血</string>
+	<string>贫血</string>
+	<string>感染败血症</string>
+	<string>重度肺炎</string>
+	<string>低血糖</string>
+	<string>酸中毒</string>
+	<string>中枢神经异常</string>
+</array>
+</plist>

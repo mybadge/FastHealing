@@ -1,0 +1,56 @@
+//
+//  PrefixHeader.pch
+//  FastHealing
+//
+//  Created by 赵志丹 on 16/1/19.
+//  Copyright © 2016年 FastHealing. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#ifdef __OBJC__
+#import "UIView+Extension.h"
+#import "UIBarButtonItem+Extension.h"
+
+//这里添加要导入的公共头文件
+
+#ifdef DEBUG // 处于开发阶段
+#define FHLog(...) NSLog(__VA_ARGS__)
+#else // 处于发布阶段
+#define FHLog(...)
+#endif
+
+/** RGB颜色 */
+#define FHColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+/**  随机色 */
+#define FHRandomColor FHColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+
+/**  通知的简写形式 */
+#define FHNotificationCenter [NSNotificationCenter defaultCenter]
+/**  屏幕的bounds */
+#define FHScreenSize [UIScreen mainScreen].bounds.size
+/**  登录页面 */
+#define FHLoginVC [[UIStoryboard storyboardWithName:@"FHLogin" bundle:nil] instantiateInitialViewController]
+/** 公益按钮中字体颜色 */
+#define FHPublicBenefitColor FHColor(90, 199, 245)
+
+/** 登录页面 */
+#define FHThemeColor FHColor(35, 188, 185)
+
+/** login_token */
+#define FHLoginToken @"985c96ce43bb5ef69de3e1ad8afaa83f"
+
+#define kAccountFieldKey @"accountField"
+#define kPwdFieldKey @"pwdField"
+#define kRemPwdSwitchKey @"remPwdSwitch"
+#define kAutoLoginSwitchKey @"autoLoginSwitch"
+
+#define FHSideMenuOffset FHScreenSize.width * 0.3
+
+/** 本地存储用户的真实姓名和身份证号 */
+#define NUserRealName @"NUserRealName"
+#define NUserRealID @"NUserRealID"
+#endif
+#endif /* PrefixHeader_pch */

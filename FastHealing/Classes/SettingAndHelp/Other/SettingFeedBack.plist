@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>textName</key>
+		<string>客服电话:400-633-1113</string>
+		<key>imageName</key>
+		<string>login_person_default</string>
+		<key>accessImageName</key>
+		<string>right</string>
+	</dict>
+	<dict>
+		<key>textName</key>
+		<string>用户交流群:88148596</string>
+		<key>imageName</key>
+		<string>login_girl</string>
+		<key>accessImageName</key>
+		<string>right</string>
+	</dict>
+</array>
+</plist>

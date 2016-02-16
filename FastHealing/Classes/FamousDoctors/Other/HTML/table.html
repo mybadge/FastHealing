@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html>
+<!-- 网页的配置信息 -->
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>表格</title>
+
+    
+<!--    外部的样式表-->
+    <link rel="stylesheet" href="tablecss.css"/>
+    <!--    js代码-->
+    <script>
+        function myFunction000(month,day)
+        {
+            var a=month;
+            var b=day;
+           
+            for(var temp=1;temp<8;temp++){
+            x=document.getElementById("F"+temp);  // 找到元素
+            b++;
+           if(b>31){
+            a=(a+1)%12;
+            b=1;
+            }
+            x.innerHTML=a+"-"+b; // 改变内容
+            }
+        
+        }
+    function  myFunction001(id){
+        x=document.getElementById("1"+id);  // 找到元素
+        x.innerHTML="有号"; // 改变内容
+    }
+    function myFunction111(content)
+    {
+        
+      x=document.getElementById("div1");  // 找到元素
+      x.innerHTML=content; // 改变内容
+        
+    }
+    function myFunction112(content)
+    {
+        
+       x=document.getElementById("span1");  // 找到元素
+        x.innerHTML="￥"+content; // 改变内容
+        
+       
+    }
+    function dianji(obj){
+        //这个就是id
+        window.location.href = "niu://"+obj.id;
+        x=document.getElementById(id);
+        
+    }
+    
+    var ObjTable = new Object();
+    var prevbool = true;
+    ObjTable.colCount=0;	//列数
+    ObjTable.rowCount=0;	//行数
+    ObjTable.Map = null;	//Table Map
+    ObjTable.prevRow = -1;	//前一单元格的行号，默认为-1
+    ObjTable.prevCol = -1;	//前一单元格的列号，默认为-1
+    ObjTable.curRow=-1;	//当前行号，默认为-1
+    ObjTable.curCol=-1;	//当前列号，默认为-1
+    ObjTable.Element="TD";	//待操作元素的Tag Name
+    ObjTable.Load = function(a_sID,a_sTagName){	//载入table
+        var iRowCount=0, iColCount=0, i, j, m, n, iIndex=0, iCount;
+        var sTable = document.getElementById(a_sID);
+        if (sTable!=null) {	//设置tble属性
+            var tableMap = [];
+            iColCount=sTable.rows[0].cells.length;
+            iRowCount = sTable.rows.length;	//获取总行数
+            sTable.getElementsByTagName('tbody')[0].onclick=ObjTable_setFocus;	//监听click事件
+            document.getElementsByTagName('body')[0].onkeydown=ObjTable_moveFocus;	//监听keydown事件
+            ObjTable.colCount = iColCount;	//列数
+            ObjTable.rowCount = iRowCount;	//行数
+            var aCols=null, iCell;
+            for (i=0; i<iRowCount; ++i) {
+                aCols = new Array(iColCount);
+                tableMap.push(aCols);
+            }
+            for (i=0; i<iRowCount; ++i) {
+                iIndex=0;
+                for (j=0; j<iColCount; j+=iCell.colSpan) {
+                    if (tableMap[i][j]==null) {
+                        iCell = sTable.rows[i].cells[iIndex++];
+                        for(m=i; m<i+iCell.rowSpan; ++m) {
+                            for(n=j; n<j+iCell.colSpan; ++n) {tableMap[m][n] = i+','+j;}
+                        }
+                        tableMap[i][j] = iCell;
+                    }
+                }
+            }
+            ObjTable.Map = tableMap;//table map结束
+        }
+    };
+    //鼠标点击设置焦点
+    var iCurRow,iCurCol;
+    function ObjTable_setFocus(event){
+        var e = event || window.event;
+        var obj = e.target || e.srcElement, oParent = obj.parentNode;
+        var iCurRow = ObjTable.curRow, iCurCol = ObjTable.curCol;
+        if (prevbool==true){var iCurRow = ObjTable.curRow, iCurCol = ObjTable.curCol;}
+        else{ObjTable.prevRow = iCurRow;ObjTable.prevCol = iCurCol;}
+        RecallFocus(ObjTable);
+        var oPrevNode = ObjTable.getNode(ObjTable.prevRow,ObjTable.prevCol);
+        var iColCount = ObjTable.colCount;
+        var aMaps = ObjTable.Map;
+        if (oParent.tagName.toUpperCase() != "TR") {return;}
+        iCurRow = oParent.rowIndex;
+        for (var i=0; i<iColCount; i++){
+            if (aMaps[iCurRow][i]==obj) {
+                iCurCol = i;
+                break;
+            }
+        }
+        //设置结点的位置
+        ObjTable.curRow = iCurRow;
+        ObjTable.curCol = iCurCol;
+        //记录前一个节点的位置
+        ObjTable.prevRow = iCurRow;
+        ObjTable.prevCol = iCurCol;
+        obj.focus();
+        obj.bgColor ="#00FFFF";
+        obj.style.color="#FFFFFF";
+        prevbool=true;
+    }
+    //移动焦点
+    function ObjTable_moveFocus(event) {
+        //获取当前结点
+        var e = event || window.event;
+        var oNode = e.target || e.srcElement;
+        var oNext = null;
+        switch (e.keyCode) {
+            case 37://左键 2
+            oNext = CTable_getNextNode(2);
+            break;
+            case 38://上键 0
+            oNext = CTable_getNextNode(0);
+            break;
+            case 13://回车键
+            case 39://右键 3
+            oNext = CTable_getNextNode(3);
+            break;
+            case 40://下键 1
+            oNext = CTable_getNextNode(1);
+            break;
+        }
+        //改变背景色
+        if (oNext) {
+            oNext.focus();
+            oNext.bgColor="#00FFFF";
+            oNext.style.color="#FFFFFF";
+        }
+    }
+    //获取指定行、列号的单元格
+    ObjTable.getNode = function(a_iRow,a_iCol) {
+        //如果行号或列号小于零，则返回null
+        if (a_iRow<0 || a_iCol<0) {return null;}
+        //初始化数据
+        var oNode=null;
+        var aMaps = ObjTable.Map, aTemps=null;
+        var iRow = a_iRow, iCol=a_iCol;
+        var sTemp="";
+        //获取结点
+        while(true) {
+            oNode = aMaps[iRow][iCol];
+            sTemp=typeof(oNode);
+            if (sTemp.toLowerCase()=="string") {
+                aTemps=oNode.split(",");
+                iRow = aTemps[0];
+                iCol = aTemps[1];
+            }
+            else {break;}
+        }
+        return oNode;	//函数返回值
+    }
+    //获取一下结点
+    function CTable_getNextNode(a_key) {
+        var oNode = null;
+        var iCol = ObjTable.curCol ,iRow=ObjTable.curRow;
+        var iRowCount = ObjTable.rowCount, iColCount=ObjTable.colCount;
+        var aMaps = ObjTable.Map, aTemps=null;
+        var iCurCol=iCol, iCurRow = iRow, iTemp;
+        var sTemp="", sStr="";
+        oNode = aMaps[iRow][iCol];
+        if (typeof(oNode)=="string") {
+            aTemps = oNode.split(",");
+            iCurRow = aTemps[0];
+            iCurCol = aTemps[1];
+        }
+        while (true) {
+            switch(a_key) {
+                case 0:
+                iRow--;
+                break;
+                case 1:
+                iRow++;
+                break;
+                case 2:
+                iCol--;
+                if (iCol<0) {
+                    iCol = iColCount-1;
+                    iRow--;
+                }
+                break;
+                case 3:
+                iCol++;
+                if (iCol>=iColCount) {
+                    iRow++;
+                    iCol=0;
+                }
+                break;
+            }
+            if (iRow<0) {iRow=iRowCount-1;}
+            if (iRow>=iRowCount) {iRow=0;}
+            if ((iCurRow == iRow) && (iCurCol == iCol)) {continue;}
+            oNext = aMaps[iRow][iCol];
+            sTemp=typeof(oNext);
+            if (sTemp.toLowerCase()=="string") {
+                aTemps=oNext.split(",");
+                if ((iCurRow!=aTemps[0]) || (iCurCol!=aTemps[1])){break;}
+                continue;
+            }
+            break;
+        }; //end CTable.get Next Node
+        switch(a_key) {
+            case 0://上
+            case 1://下
+            if (oNext.colSpan>1) {
+                ObjTable.prevCol = CTable.curCol;
+                ObjTable.prevRow = ObjTable.curRow;
+                ObjTable.curRow = iRow;
+            }
+            else {
+                ObjTable.prevCol = ObjTable.curCol;
+                ObjTable.prevRow = ObjTable.curRow;
+                ObjTable.curCol = iCol;
+                ObjTable.curRow = iRow;
+            }
+            break;
+            case 2://左
+            case 3://右
+            if (oNext.rowSpan>1) {
+                ObjTable.prevCol = ObjTable.curCol;
+                ObjTable.curCol = iCol;
+                iTemp = ObjTable.curRow;
+                ObjTable.curRow = iRow;
+                ObjTable.prevRow = iTemp;
+            }
+            else {
+                ObjTable.prevCol = ObjTable.curCol;
+                ObjTable.prevRow = ObjTable.curRow;
+                ObjTable.curCol = iCol;
+                ObjTable.curRow = iRow;
+            }
+            break;
+        }
+        RecallFocus(ObjTable);
+        prevbool=false;
+        iCurRow=ObjTable.curCol;
+        iCurCol=ObjTable.curRow;
+        return oNext;
+    }
+    function RecallFocus(c){
+        var oPrev = ObjTable.getNode(c.prevRow,c.prevCol);
+        if (oPrev) {
+            oPrev.bgColor="#FFFFFF";
+            oPrev.style.color="#000000";
+        }
+    }
+    //窗体载入函数
+    window.onload=function() {ObjTable.Load("table1","TD");};
+    </script>
+</head>
+<!-- 网页的具体内容 -->
+<body>
+<div>
+<span  style="float:left"></span>
+<span id="span1" style="float: right;color:red;">￥0</span>
+</div>
+<div id="div1" style="font-size:18px;">北京市</div>
+<hr>
+<span  style="float:left"></span>
+<span style="float: right;color:orange;">本周</span>
+
+
+<div style="font-size:20px;text-align:center;color:gray;">可预约时间</div>
+<hr>
+<table id="table1" cellspacing="0">
+    <tr>
+        <td></td>
+        <th><div>周一</div><div id="F1">无数据</div></th>
+        <th><div>周二</div><div id="F2">无数据</div></th>
+        <th><div>周三</div><div id="F3">无数据</div></th>
+        <th><div>周四</div><div id="F4">无数据</div></th>
+        <th><div>周五</div><div id="F5">无数据</div></th>
+        <th><div>周六</div><div id="F6">无数据</div></th>
+        <th><div>周日</div><div id="F7">无数据</div></th>
+    </tr>
+    <tr>
+        <td style="text-align:center">上<br/>午</td>
+        <th id="11" onclick="javascript:dianji(this);" ></th>
+        <th id="12" onclick="javascript:dianji(this);"></th>
+        <th id="13" onclick="javascript:dianji(this);"></th>
+        <th id="14" onclick="javascript:dianji(this);"></th>
+        <th id="15" onclick="javascript:dianji(this);"></th>
+        <th id="16" onclick="javascript:dianji(this);"></th>
+        <th id="17" onclick="javascript:dianji(this);"></th>
+    </tr>
+    <tr>
+        <td style="text-align:center">下<br/>午</td>
+        <th id="21" onclick="javascript:dianji(this);" ></th>
+        <th id="22" onclick="javascript:dianji(this);"></th>
+        <th id="23" onclick="javascript:dianji(this);"></th>
+        <th id="24" onclick="javascript:dianji(this);"></th>
+        <th id="25" onclick="javascript:dianji(this);"></th>
+        <th id="26" onclick="javascript:dianji(this);"></th>
+        <th id="27" onclick="javascript:dianji(this);"></th>
+    </tr>
+    <tr>
+        <td style="text-align:center">晚<br/>上</td>
+        <th id="31" onclick="javascript:dianji(this);" ></th>
+        <th id="32" onclick="javascript:dianji(this);"></th>
+        <th id="33" onclick="javascript:dianji(this);"></th>
+        <th id="34" onclick="javascript:dianji(this);"></th>
+        <th id="35" onclick="javascript:dianji(this);"></th>
+        <th id="36" onclick="javascript:dianji(this);"></th>
+        <th id="37" onclick="javascript:dianji(this);"></th>
+        
+    </tr>
+</table>
+
+
+</body>
+</html>

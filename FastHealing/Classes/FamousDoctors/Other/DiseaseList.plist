@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>痉挛型</string>
+		<key>image</key>
+		<string>jingluanxing</string>
+		<key>disease</key>
+		<array>
+			<string>马蹄足</string>
+			<string>O型腿</string>
+			<string>足内翻</string>
+			<string>X型腿</string>
+			<string>足外翻</string>
+			<string>剪刀步</string>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>手足徐动型</string>
+		<key>image</key>
+		<string>shouzuxudong</string>
+		<key>disease</key>
+		<array>
+			<string>长流口水</string>
+			<string>吞咽困难</string>
+			<string>口齿不清</string>
+			<string>姿态异常</string>
+			<string>摄食障碍</string>
+			<string>性格固执</string>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>共济失调型</string>
+		<key>image</key>
+		<string>gongjishitiao</string>
+		<key>disease</key>
+		<array>
+			<string>抓物困难</string>
+			<string>追视困难</string>
+			<string>足尖翘起</string>
+			<string>智力低下</string>
+			<string>平衡失调</string>
+			<string>语言障碍</string>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>其他脑瘫分型</string>
+		<key>image</key>
+		<string>qitanaotanxing</string>
+		<key>disease</key>
+		<array>
+			<string>先天性脑瘫</string>
+			<string>混合型脑瘫</string>
+			<string>强直型脑瘫</string>
+			<string>震颤型脑瘫</string>
+			<string>不随意运动</string>
+			<string>肌张力低下</string>
+		</array>
+	</dict>
+</array>
+</plist>

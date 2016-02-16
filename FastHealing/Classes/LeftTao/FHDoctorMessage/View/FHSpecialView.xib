@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FHSpecialView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L6n-s6-clJ">
+                    <rect key="frame" x="20" y="20" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="fPA-pX-EBO"/>
+                        <constraint firstAttribute="width" constant="20" id="mwp-Eg-U2a"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="特殊条件" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dA8-jk-UCN">
+                    <rect key="frame" x="48" y="20" width="60" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="1" green="0.73415408790000003" blue="0.27070396800000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labe" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMX-kk-yCE">
+                    <rect key="frame" x="48" y="46" width="512" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.52941176469999995" green="0.52941176469999995" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CCn-pE-Zir">
+                    <rect key="frame" x="20" y="78" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="NIJ-PN-JkM"/>
+                        <constraint firstAttribute="height" constant="20" id="eGd-9I-eqB"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="基本条件" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vlq-On-cLc">
+                    <rect key="frame" x="48" y="79" width="60" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.46666666666666667" green="0.82745098039215681" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YNt-Pk-oVy">
+                    <rect key="frame" x="48" y="112" width="512" height="488"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yb3-RC-uLZ">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.uptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen leguuptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen leguuptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen leguuptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen leguuptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen leguuptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen leguuptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen leguuptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen leguuptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen leguuptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen leguuptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen leguuptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen leguuptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen leguuptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen leguuptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legu</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="qMX-kk-yCE" firstAttribute="leading" secondItem="dA8-jk-UCN" secondAttribute="leading" id="76U-3r-iWh"/>
+                <constraint firstItem="vlq-On-cLc" firstAttribute="leading" secondItem="CCn-pE-Zir" secondAttribute="trailing" constant="8" id="B2U-7F-gdM"/>
+                <constraint firstAttribute="trailing" secondItem="qMX-kk-yCE" secondAttribute="trailing" constant="40" id="IQV-tK-En0"/>
+                <constraint firstAttribute="trailing" secondItem="YNt-Pk-oVy" secondAttribute="trailing" constant="40" id="Jxp-Se-1Mw"/>
+                <constraint firstItem="yb3-RC-uLZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="OmL-xJ-dfq"/>
+                <constraint firstItem="L6n-s6-clJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="Pfb-5i-EZk"/>
+                <constraint firstItem="CCn-pE-Zir" firstAttribute="leading" secondItem="L6n-s6-clJ" secondAttribute="leading" id="TjP-Dw-Lbk"/>
+                <constraint firstItem="YNt-Pk-oVy" firstAttribute="leading" secondItem="vlq-On-cLc" secondAttribute="leading" id="YcI-hC-3es"/>
+                <constraint firstAttribute="trailing" secondItem="yb3-RC-uLZ" secondAttribute="trailing" id="YyN-oV-MGf"/>
+                <constraint firstItem="L6n-s6-clJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="ax4-U6-lcr"/>
+                <constraint firstItem="YNt-Pk-oVy" firstAttribute="top" secondItem="vlq-On-cLc" secondAttribute="bottom" constant="15" id="bfC-mQ-VHG"/>
+                <constraint firstItem="dA8-jk-UCN" firstAttribute="leading" secondItem="L6n-s6-clJ" secondAttribute="trailing" constant="8" id="c32-UC-fLZ"/>
+                <constraint firstAttribute="bottom" secondItem="yb3-RC-uLZ" secondAttribute="bottom" id="h1K-GS-1uL"/>
+                <constraint firstItem="yb3-RC-uLZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ikZ-e7-W3Z"/>
+                <constraint firstAttribute="bottom" secondItem="YNt-Pk-oVy" secondAttribute="bottom" id="jOe-S0-WdS"/>
+                <constraint firstItem="vlq-On-cLc" firstAttribute="centerY" secondItem="CCn-pE-Zir" secondAttribute="centerY" id="o9H-hA-Px4"/>
+                <constraint firstItem="vlq-On-cLc" firstAttribute="top" secondItem="qMX-kk-yCE" secondAttribute="bottom" constant="15" id="xHP-Lp-dl2"/>
+                <constraint firstItem="qMX-kk-yCE" firstAttribute="top" secondItem="dA8-jk-UCN" secondAttribute="bottom" constant="8" id="yfX-yh-kgg"/>
+                <constraint firstItem="dA8-jk-UCN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="zi0-Cz-eyn"/>
+            </constraints>
+            <connections>
+                <outlet property="extenLabel" destination="qMX-kk-yCE" id="Xje-3h-nPx"/>
+                <outlet property="tableView" destination="YNt-Pk-oVy" id="1DJ-yH-2xU"/>
+                <outlet property="textView" destination="yb3-RC-uLZ" id="DSK-ki-xZr"/>
+            </connections>
+        </view>
+    </objects>
+</document>

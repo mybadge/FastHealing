@@ -1,0 +1,18 @@
+table,td,th
+{
+    border:0.6px solid gray;
+}
+table
+{
+    width:100%;
+}
+th
+{
+    height:60px;
+    font-size:13px
+}
+
+/*div{*/
+/*    color:blue;*/
+/*    font-size:16px;*/
+/*}*/
